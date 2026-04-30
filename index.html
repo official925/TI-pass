@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITパスポート暗記カード</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>フラッシュカード</h1>
+
+  <div class="card" onclick="flipCard()">
+    <p id="question"></p>
+    <p id="answer" class="hidden"></p>
+  </div>
+
+  <!-- 進捗表示 -->
+  <p id="counter"></p>
+
+  <div class="controls">
+    <button onclick="prevCard()">←</button>
+    <button onclick="nextCard()">→</button>
+  </div>
+
+  <div class="auto">
+    <input type="number" id="intervalInput" value="3" min="1"> 秒
+    <button onclick="toggleAuto()" id="autoBtn">自動</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
